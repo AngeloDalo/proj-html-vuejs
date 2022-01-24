@@ -1,9 +1,31 @@
 <template>
-    <main>
+    <main class="container-fluid">
         <div class="container-summary" id="about-us">
             <h2>WORLD CLASS Fitness</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
             <p>At Avada Gym, everything we do from top to bottom is of the heighest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle</p>
+        </div>
+        <div class="container-singup">
+            <div class="row">
+                <div class="col-6 d-flex justify-content-end">
+                    <img src="../assets/img/home_img-compressor.jpg" alt="home_img-compressor">
+                </div>
+                <div class="col-6">
+                    <h3>Sign Up For A Free Training Session</h3>
+                    <form>
+                        <label for="Name">Name*</label> <br>
+                        <input type="text" id="Name" name="Name"> <br>
+                        <label for="Name">Email</label> <br>
+                        <input type="email" id="Email" name="Email"> <br>
+                        <input type="submit" value="START NOW!">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container-condition">
+            <ul class="row">
+
+            </ul>
         </div>
     </main>
 </template>
@@ -13,7 +35,29 @@ export default {
     name: 'Main',
     data () {
         return {
-
+            cardsCondition: [
+                {
+                    "icons": "fas fa-unlink",
+                    "title": "Srength & Conditioning",
+                    "cross": "duvider-x-red",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
+                },                {
+                    "icons": "fas fa-bicycle",
+                    "title": "Fitness & Cardio",
+                    "cross": "duvider-x-red",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
+                },                {
+                    "icons": "fas fa-cloud",
+                    "title": "Flexibility & Rest",
+                    "cross": "duvider-x-red",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
+                },                {
+                    "icons": "fas fa-heartbeat",
+                    "title": "Health & Diet",
+                    "cross": "duvider-x-red",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
+                },
+            ],
         }
     }
 }
@@ -23,11 +67,12 @@ export default {
 @import "../assets/scss/partials/_variables.scss";
 @import "../assets/scss/partials/_commons.scss";
 main {
-    padding-top: 7em;
-    padding-bottom: 7em;
-    text-align: center;
-    background-color: $ColorCubeBlak;
     .container-summary {
+        width: 100%;
+        text-align: center;
+        padding-top: 6em;
+        padding-bottom: 6em;
+        background-color: $ColorCubeBlak;
         h2 {
             color: white;
         }
@@ -40,6 +85,52 @@ main {
             margin-right: 25%;
             color: $TextColorSummary;
             font-size: 0.9em;
+        }
+    }
+    .container-singup {
+        width: 100%;
+        background-color: $ContainerSignUP;
+        .row {
+            width: 75%;
+            padding-top: 5em;
+            padding-bottom: 5em;
+            .col-6 {
+                img {
+                    width: 100%;
+                    height: 250px;
+                }
+                h3 {
+                    color:white;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    margin-bottom: 2em;
+                }
+                form {
+                    label {
+                        color: $TextColorSummary;
+                        margin-bottom: 0.5em;
+                    }
+                    input {
+                        color: white;
+                        width: 100%;
+                        background-color: transparent;
+                        border: 0.5px solid $TextColorSummary;
+                    }
+                    input:last-child {
+                        color: white;
+                        margin-top: 2em;
+                        padding: 0.7em;
+                        background-color: $SignUpButton;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    .container-condition {
+        width: 100%;
+        .row {
+            width: 75%;
         }
     }
 }
