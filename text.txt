@@ -1,0 +1,11 @@
+Aggiungere Header e Footer con VueJs creando una struttura dati che consenta di inserire i link nelle navbar. Non ci sono API da interrogare, ma create i dati a mano nel vostro js.
+Deadline
+Organizzazione del lavoro
+Analizzate attentamente il layout prima di partire, utilizzate sempre il metodo dei commenti per identificare le aree del layout e individuare elementi comuni riutilizzabili.
+Una volta analizzato il progetto create una tabella di marcia, il lavoro è divisibile in due fasi, layout / funzionalità VueJs, è indispensabile consegnare entrambe le parti del progetto.
+Immaginate quindi cosa vi servirà per l’aggiunta delle parti dinamiche e scrivete i commenti anche per questa parte di lavoro.
+Meglio un layout con header/footer e 2 o 3 sezioni complete, che un layout completo ma senza VueJs. Teniamo presente che l’ideale è sempre consegnare il lavoro completo.
+Procedete poi con il layout sezione per sezione raggiungendo un livello di dettaglio il più simile a quello proposto dal designer.
+Ricordate: il designer ha lavorato duramente per immaginare il layout e ha scelto certe soluzioni per ottime motivazioni, il nostro compito è rendere reale la sua creatività!
+Calcolate poi il momento giusto per poter passare alla parte VueJs tenendo presente la Deadline.
+Come affrontare il lavoro.
