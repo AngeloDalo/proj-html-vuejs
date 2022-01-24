@@ -32,19 +32,19 @@ export default {
                 "link": "#" 
             },            {
                 "name": "ABOUT US",
-                "link": "#" 
+                "link": "#about-us" 
             },            {
                 "name": "FACILITIES",
-                "link": "#" 
+                "link": "#facilities" 
             },            {
                 "name": "MEMBERSHIP",
-                "link": "#" 
+                "link": "#membership" 
             },            {
                 "name": "TESTIMONIALS",
-                "link": "#" 
+                "link": "#testimonials" 
             },            {
                 "name": "BLOG",
-                "link": "#" 
+                "link": "#blog" 
             },
         ],
         }
@@ -104,6 +104,11 @@ header {
             color: white;
             text-transform: uppercase;
             padding: 0.5em 1.3em;
+            &:hover {
+                background-color: white;
+                font-weight: bold;
+                color: black
+            }
         }
     }
 }
