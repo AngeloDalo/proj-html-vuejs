@@ -22,11 +22,11 @@
                 </div>
             </div>
         </div>
-        <div class="container-condition">
+        <div class="container-condition" id="facilities">
             <ul class="row">
                 <MainCondition
                     v-for="(cardCondition, index) in cardsCondition"
-                    :key="index"
+                    :key="index+cardsCondition.title"
                     :icons = "cardCondition.icon"
                     :title = "cardCondition.title"
                     :img = "cardCondition.cross"
@@ -41,13 +41,25 @@
                 <ul class="row">
                     <MainResult
                         v-for="(resultCard, index) in resultCards"
-                        :key="index"
+                        :key="index+resultCard.name"
                         :img = "resultCard.img"
                         :alt = "resultCard.name"
                         :text = "resultCard.text"
                         :name = "resultCard.name" 
                     />
-            </ul>
+                </ul>
+        </div>
+        <div class="container-image">
+            <h2>real world results</h2>
+            <img src="../assets/img/divider-xx-red.png" alt="xx-red">
+                <ul class="row">
+                    <MainImage
+                        v-for="(imagesCard, index) in imagesCards"
+                        :key="index+imagesCard.alt"
+                        :img = "imagesCard.img" 
+                        :alt = "imagesCard.name"
+                    />
+                </ul>
         </div>
     </main>
 </template>
@@ -55,11 +67,13 @@
 <script>
 import MainCondition from "./MainCondition.vue"
 import MainResult from "./MainResult.vue"
+import MainImage from "./MainImage.vue"
 export default {
     name: 'Main',
     components: {
         MainCondition,
         MainResult,
+        MainImage
     },
     data () {
         return {
@@ -104,6 +118,28 @@ export default {
                     "text": "“No bad things to say about Avada Gym, they are top notch at every corner and truly take care of their customers.”",
                     "name": "– Jeff Glum"
                 },
+            ],
+            imagesCards: [
+                {
+                    "img": require("../assets/img/home-image1.jpg"),
+                    "name": "img1"
+                },                {
+                    "img": require("../assets/img/home-image2.jpg"),
+                    "name": "img2"
+                },                {
+                    "img": require("../assets/img/home-image3.jpg"),
+                    "name": "img3"
+                },                {
+                    "img": require("../assets/img/home-image4.jpg"),
+                    "name": "img4"
+                },
+                {
+                    "img": require("../assets/img/home-image54.jpg"),
+                    "name": "img5"
+                },                {
+                    "img": require("../assets/img/home-image6.jpg"),
+                    "name": "img6"
+                }, 
             ],
         }
     }
@@ -186,6 +222,7 @@ main {
         }
     }
     .container-results {
+        //fare mixin alla fine
         text-align: center;
         width: 100%;
         background-color: $ColorCubeBlak;
@@ -196,6 +233,21 @@ main {
             color: white;
         }
         .row {
+            width: 75%;
+        }
+    }
+    .container-image {
+        text-align: center;
+        width: 100%;
+        background-color: $ColorCubeBlak;
+        padding-top: 5em;
+        padding-bottom: 7em;
+        h2 {
+            text-transform: uppercase;
+            color: white;
+        }
+        .row {
+            margin-top: 2em;
             width: 75%;
         }
     }

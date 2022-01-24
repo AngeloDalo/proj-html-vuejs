@@ -87,7 +87,7 @@ header {
     }
     .jubotron {
         padding-top: 16em;
-        padding-bottom: 6em;
+        padding-bottom: 6.5em;
         text-align: center;
         h1 {
             font-size: 5em;
