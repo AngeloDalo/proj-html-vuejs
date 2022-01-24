@@ -24,37 +24,49 @@
         </div>
         <div class="container-condition">
             <ul class="row">
-
+                <MainCondition
+                    v-for="(cardCondition, index) in cardsCondition"
+                    :key="index+cardConditions"
+                    :icons = "cardCondition.icon"
+                    :title = "cardCondition.title"
+                    :img = "cardCondition.cross"
+                    :alt = "cardCondition.title"
+                    :text = "cardCondition.text" 
+                />
             </ul>
         </div>
     </main>
 </template>
 
 <script>
+import MainCondition from "./MainCondition.vue"
 export default {
     name: 'Main',
+    components: {
+        MainCondition,
+    },
     data () {
         return {
             cardsCondition: [
                 {
-                    "icons": "fas fa-unlink",
+                    "icon": "fas fa-unlink",
                     "title": "Srength & Conditioning",
-                    "cross": "duvider-x-red",
+                    "cross": require("../assets/img/divider-x-red.png"),
                     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
                 },                {
-                    "icons": "fas fa-bicycle",
+                    "icon": "fas fa-bicycle",
                     "title": "Fitness & Cardio",
-                    "cross": "duvider-x-red",
+                    "cross": require("../assets/img/divider-x-red.png"),
                     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
                 },                {
-                    "icons": "fas fa-cloud",
+                    "icon": "fas fa-cloud",
                     "title": "Flexibility & Rest",
-                    "cross": "duvider-x-red",
+                    "cross": require("../assets/img/divider-x-red.png"),
                     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
                 },                {
-                    "icons": "fas fa-heartbeat",
+                    "icon": "fas fa-heartbeat",
                     "title": "Health & Diet",
-                    "cross": "duvider-x-red",
+                    "cross": require("../assets/img/divider-x-red.png"),
                     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
                 },
             ],
@@ -128,6 +140,11 @@ main {
         }
     }
     .container-condition {
+        background-image: url(../assets/img/gym_bkgd_bw-compressor.jpg);
+        background-position: center;
+        background-size: contain;
+        padding-top: 5em;
+        padding-bottom: 7em;
         width: 100%;
         .row {
             width: 75%;
