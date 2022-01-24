@@ -4,6 +4,7 @@
         <img :src="img" :alt="alt">
         <p>{{ text }}</p>
         <i class="fas fa-heart"></i>
+        <i class="bi bi-123"></i>
     </li>
 </template>
 

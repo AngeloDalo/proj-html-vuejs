@@ -26,7 +26,7 @@
             <ul class="row">
                 <MainCondition
                     v-for="(cardCondition, index) in cardsCondition"
-                    :key="index+cardConditions"
+                    :key="index"
                     :icons = "cardCondition.icon"
                     :title = "cardCondition.title"
                     :img = "cardCondition.cross"
