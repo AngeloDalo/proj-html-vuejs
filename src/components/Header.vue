@@ -1,9 +1,11 @@
 <template>
     <header class="pt-3 ps-5">
         <div class="row">
+            <!--logo sito-->
             <div class="col-6">
                 <img src="..\assets\img\gym_logo_1x.png" alt="gym_logo_1x">
             </div>
+            <!--link sito-->
             <div class="col-6">
                 <ul class="d-flex justify-content-end align-items-center">
                     <li class="me-4" v-for="(linkHeader, index) in linksHeader" :key="index">

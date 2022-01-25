@@ -4,7 +4,9 @@
             <h2>WORLD CLASS Fitness</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
             <p>At Avada Gym, everything we do from top to bottom is of the heighest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle</p>
+            <div class="square-summary"></div>
         </div>
+
         <div class="container-singup">
             <div class="row">
                 <div class="col-6 d-flex justify-content-end">
@@ -22,6 +24,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container-condition">
             <ul class="row">
                 <MainCondition
@@ -35,6 +38,7 @@
                 />
             </ul>
         </div>
+
         <div class="container-results">
             <h2>real world results</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
@@ -49,6 +53,7 @@
                     />
                 </ul>
         </div>
+
         <div class="container-image">
             <h2>high performance facilities</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
@@ -61,12 +66,14 @@
                     />
                 </ul>
         </div>
+
         <div class="container-phrase">
             <p>
                 “ I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times ”
             </p>
             <span>BRUCE LEE • QUOTE OF THE DAY</span>
         </div>
+
         <div class="container-trainers">
             <h2>meet our trainers</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
@@ -81,7 +88,9 @@
                     />
                 </ul>
             <button>view all trainers</button>
+            <div class="square-trainers"></div>
         </div>
+
         <div class="container-news">
             <h2>performance news</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
@@ -243,6 +252,7 @@ export default {
 @import "../assets/scss/partials/_main.scss";
 main {
     .container-summary {
+        position: relative;
         @include container-son;
         text-align: center;
         padding-top: 6em;
@@ -260,6 +270,12 @@ main {
             margin-right: 25%;
             color: $TextColorSummary;
             font-size: 0.9em;
+        }
+        //tringolo fine pagina
+        //quadrato di dimensioni fisse messo in absolute e ruotato di 45 gradi
+        .square-summary {
+            @include square;
+            background-color: $ColorCubeBlak;
         }
     }
     .container-singup {
@@ -356,6 +372,7 @@ main {
     .container-trainers {
         @include container-son;
         @include padding-text;
+        position: relative;
         background-color: $ContainerSignUP;
         h2 {
             text-transform: uppercase;
@@ -376,7 +393,11 @@ main {
                 background-color: $TextColorSummary;
                 color: black;
             }
-        }     
+        }  
+        .square-trainers {
+            background-color: $ContainerSignUP;
+            @include square;
+        }   
     }
     .container-news {
         @include container-son;
