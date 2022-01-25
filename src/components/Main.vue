@@ -80,6 +80,7 @@
                         :text = "trainersCard.text"
                     />
                 </ul>
+            <button>view all trainers</button>
         </div>
     </main>
 </template>
@@ -320,7 +321,19 @@ main {
         .row {
             margin-top: 2em;
             width: 75%;
-        }        
+        }   
+        button {
+            background-color: transparent;
+            border: 1px solid $TextColorSummary;
+            color: $TextColorSummary;
+            text-transform: uppercase;
+            margin-top: 3em;
+            padding: 0.5em 2em;
+            &:hover {
+                background-color: $TextColorSummary;
+                color: black;
+            }
+        }     
     }
 }
 </style>
