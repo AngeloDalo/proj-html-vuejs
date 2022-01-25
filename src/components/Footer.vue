@@ -39,6 +39,16 @@
                 <img src="../assets/img/gym_ad-compressor.jpg" alt="gym ad-compressor">
             </div>
         </div>
+        <div class="container-end row">
+            <div class="col-9">
+                <p>&copy; Copyright 2015 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</p>
+            </div>
+            <div class="col-3">
+                <a href="#"><i class="icons fab fa-facebook-f"></i></a>
+                <a href="#"><i class="icons fab fa-twitter"></i></a>
+                <a href="#"><i class="icons fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 </template>
 
@@ -111,6 +121,31 @@ export default {
     }
     img {
         width: 90%;
+    }
+}
+.container-end {
+    background-color: $endFooter;
+    padding: 2em 12.5%;
+    display: flex;
+    align-items: center;
+    .col-9 {
+        color: $TextColorSummary;
+        font-size: 0.8em;
+        margin-top: 1em;
+    }
+    .col-3 {
+        a {
+            margin-right: 1em;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: $ColorCubePink;
+            .icons {
+                color: white;
+            }
+        }
     }
 }
 </style>
