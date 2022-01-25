@@ -1,6 +1,6 @@
 <template>
     <li class="col-4">
-        <div class="box-img">
+        <div class="box-image">
             <img :src="img" :alt="alt">
         </div>
         <div class="box-text">
@@ -30,45 +30,9 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
 @import "../assets/scss/partials/_commons.scss";
+@import "../assets/scss/partials/_main.scss";
 li {
-    .box-img {
-        width: 100%;
-        img {
-            width: 100%;
-        }
-    }
-    .box-text {
-        background-color: $ColorCubeBlak;
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        h4 {
-            color: white;
-            font-weight: 700;
-            text-align: start;
-            width: 60%;
-            font-size: 1.2em;
-        }
-        p {
-            margin-top: 1em;
-            margin-right: 1em;
-            color: $TextColorSummary;
-            text-align: start !important;
-        }
-        .box-icon {
-            text-align: start;
-            a {
-                display: inline-block;
-                padding: 0.5em;
-                margin-right: 1em;
-                background-color: $ContainerSignUP;
-                .icons {
-                    color: white;
-                    font-size: 1.5em;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
+    @include box-img;
+    @include box-text; 
 }
 </style>

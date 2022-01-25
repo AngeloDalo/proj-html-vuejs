@@ -2,6 +2,10 @@
     <li class="col-4">
         <div class="box-img">
             <img :src="img" :alt="alt">
+            <div class="box-icons">
+                <i class="icons fas fa-link"></i>
+                <i class="icons fas fa-search"></i>
+            </div>
         </div>
         <div class="box-text">
             <h4>{{ name }}</h4>
@@ -25,6 +29,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
 @import "../assets/scss/partials/_commons.scss";
+@import "../assets/scss/partials/_main.scss";
 li {
     &:last-child {
         margin-top: -4em;
@@ -34,43 +39,39 @@ li {
     }
     margin-bottom: 2em;
     .box-img {
+        position: relative;
         width: 100%;
         img {
             width: 100%;
         }
-    }
-    .box-text {
-        background-color: $ContainerSignUP;
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        h4 {
-            color: white;
-            font-weight: 700;
-            text-align: start;
-            width: 60%;
-            font-size: 1.2em;
-        }
-        p {
-            margin-top: 1em;
-            margin-right: 1em;
-            color: $TextColorSummary;
-            text-align: start !important;
-        }
-        .box-icon {
-            text-align: start;
-            a {
-                display: inline-block;
-                padding: 0.5em;
-                margin-right: 1em;
-                background-color: $ContainerSignUP;
-                .icons {
-                    color: white;
-                    font-size: 1.5em;
-                    cursor: pointer;
-                }
+        .box-icons {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            .icons {
+                margin-left: 0.3em;
+                margin-right: 0.3em;
+                font-size: 2em;
+                color: white;
             }
         }
-    }    
+    }
+    .box-img {
+        transition: background-color 0.5s;
+        &:hover img {
+            opacity: 15%;
+        }
+        &:hover {
+            background-color: #ea5f58;
+        }
+        &:hover {
+            .box-icons {
+                display: block;
+            }
+        }
+    }
+    @include box-text; 
 }
 </style>

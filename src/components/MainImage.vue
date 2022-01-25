@@ -1,6 +1,8 @@
 <template>
     <li class="col-4">
-        <img :src="img" :alt="alt">
+        <div class="box-image">
+            <img :src="img" :alt="alt">
+        </div>
     </li>
 </template>
 
@@ -19,11 +21,11 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
 @import "../assets/scss/partials/_commons.scss";
+@import "../assets/scss/partials/_main.scss";
 li {
     display: block;
     margin-bottom: 2em;
-    img {
-        width: 100%;
-    }
+    position: relative;
+    @include box-img;
 }
 </style>

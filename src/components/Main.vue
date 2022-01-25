@@ -50,12 +50,12 @@
                 </ul>
         </div>
         <div class="container-image">
-            <h2>real world results</h2>
+            <h2>high performance facilities</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
                 <ul class="row">
                     <MainImage
                         v-for="(imagesCard, index) in imagesCards"
-                        :key="index+imagesCard.alt"
+                        :key="index+imagesCard.img"
                         :img = "imagesCard.img" 
                         :alt = "imagesCard.name"
                     />
@@ -73,7 +73,7 @@
                 <ul class="row">
                     <MainTrainers
                         v-for="(trainersCard, index) in trainersCards"
-                        :key="index+trainersCard.alt"
+                        :key="index+trainersCard.text"
                         :img = "trainersCard.img"
                         :alt = "trainersCard.alt"
                         :name = "trainersCard.name"
@@ -88,7 +88,7 @@
                 <ul class="row">
                     <MainNews
                         v-for="(newsCard, index) in newsCards"
-                        :key="index+newsCard.alt"
+                        :key="index"
                         :img = "newsCard.img"
                         :alt = "newsCard.alt"
                         :name = "newsCard.name"
@@ -240,9 +240,10 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/partials/_variables.scss";
 @import "../assets/scss/partials/_commons.scss";
+@import "../assets/scss/partials/_main.scss";
 main {
     .container-summary {
-        width: 100%;
+        @include container-son;
         text-align: center;
         padding-top: 6em;
         padding-bottom: 6em;
@@ -262,7 +263,7 @@ main {
         }
     }
     .container-singup {
-        width: 100%;
+        @include container-son;
         background-color: $ContainerSignUP;
         .row {
             width: 75%;
@@ -302,23 +303,19 @@ main {
         }
     }
     .container-condition {
+        @include container-son;
         background-image: url(../assets/img/gym_bkgd_bw-compressor.jpg);
-        background-position: center;
-        background-size: contain;
+        @include backgroud-image;
         padding-top: 5em;
-        padding-bottom: 7em;
-        width: 100%;
+        padding-bottom: 8em;
         .row {
             width: 75%;
         }
     }
     .container-results {
-        //fare mixin alla fine
-        text-align: center;
-        width: 100%;
+        @include container-son;
+        @include padding-text;
         background-color: $ColorCubeBlak;
-        padding-top: 5em;
-        padding-bottom: 7em;
         h2 {
             text-transform: uppercase;
             color: white;
@@ -328,11 +325,9 @@ main {
         }
     }
     .container-image {
-        text-align: center;
-        width: 100%;
+        @include container-son;
+        @include padding-text;
         background-color: $ColorCubeBlak;
-        padding-top: 5em;
-        padding-bottom: 7em;
         h2 {
             text-transform: uppercase;
             color: white;
@@ -343,9 +338,9 @@ main {
         }
     }
     .container-phrase {
+        @include container-son;
         background-image: url(../assets/img/home-testimonial-bg.jpg);
-        background-position: center;
-        background-size: cover;
+        @include backgroud-image;
         text-align: center;
         padding: 7em 20em 10em 20em;
         color: white;
@@ -359,11 +354,9 @@ main {
         }
     }
     .container-trainers {
-        width: 100%;
+        @include container-son;
+        @include padding-text;
         background-color: $ContainerSignUP;
-        padding-top: 5em;
-        padding-bottom: 7em;
-        text-align: center;
         h2 {
             text-transform: uppercase;
             color: white;
@@ -386,11 +379,9 @@ main {
         }     
     }
     .container-news {
-        width: 100%;
+        @include container-son;
+        @include padding-text;
         background-color: $ColorCubeBlak;
-        padding-top: 5em;
-        padding-bottom: 8em;
-        text-align: center;
         h2 {
             text-transform: uppercase;
             color: white;
