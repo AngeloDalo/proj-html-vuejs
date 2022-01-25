@@ -61,6 +61,12 @@
                     />
                 </ul>
         </div>
+        <div class="container-phrase">
+            <p>
+                “ I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times ”
+            </p>
+            <span>BRUCE LEE • QUOTE OF THE DAY</span>
+        </div>
     </main>
 </template>
 
@@ -249,6 +255,22 @@ main {
         .row {
             margin-top: 2em;
             width: 75%;
+        }
+    }
+    .container-phrase {
+        background-image: url(../assets/img/home-testimonial-bg.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        padding: 7em 20em 10em 20em;
+        color: white;
+        p {
+            font-size: 2em;
+            margin-bottom: 3em;
+        }
+        span {
+            font-weight: 700;
+            text-transform: uppercase;
         }
     }
 }
