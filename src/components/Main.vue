@@ -67,6 +67,20 @@
             </p>
             <span>BRUCE LEE • QUOTE OF THE DAY</span>
         </div>
+        <div class="container-trainers">
+            <h2>meet our trainers</h2>
+            <img src="../assets/img/divider-xx-red.png" alt="xx-red">
+                <ul class="row">
+                    <MainTrainers
+                        v-for="(trainersCard, index) in trainersCards"
+                        :key="index+trainersCard.alt"
+                        :img = "trainersCard.img"
+                        :alt = "trainersCard.alt"
+                        :name = "trainersCard.name"
+                        :text = "trainersCard.text"
+                    />
+                </ul>
+        </div>
     </main>
 </template>
 
@@ -74,12 +88,14 @@
 import MainCondition from "./MainCondition.vue"
 import MainResult from "./MainResult.vue"
 import MainImage from "./MainImage.vue"
+import MainTrainers from "./MainTrainers.vue"
 export default {
     name: 'Main',
     components: {
         MainCondition,
         MainResult,
-        MainImage
+        MainImage,
+        MainTrainers,
     },
     data () {
         return {
@@ -147,6 +163,24 @@ export default {
                     "name": "img6"
                 }, 
             ],
+            trainersCards: [
+                {
+                    "img": require("../assets/img/trainer1.jpg"),
+                    "alt": "Ann Baker Personal Trainer",
+                    "name": "Ann Baker Personal Traine",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisl, onare volutpat."
+                },                {
+                    "img": require("../assets/img/trainer3.jpg"),
+                    "alt": "Anne Warren Personal Trainer",
+                    "name": "Anne Warren Personal Traine",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisl, onare volutpat."
+                },                {
+                    "img": require("../assets/img/trainer4.jpg"),
+                    "alt": "Peter Rice Personal Trainer",
+                    "name": "Peter Rice Personal Traine",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisl, onare volutpat."
+                },
+            ]
         }
     }
 }
@@ -272,6 +306,21 @@ main {
             font-weight: 700;
             text-transform: uppercase;
         }
+    }
+    .container-trainers {
+        width: 100%;
+        background-color: $ContainerSignUP;
+        padding-top: 5em;
+        padding-bottom: 7em;
+        text-align: center;
+        h2 {
+            text-transform: uppercase;
+            color: white;
+        }
+        .row {
+            margin-top: 2em;
+            width: 75%;
+        }        
     }
 }
 </style>
