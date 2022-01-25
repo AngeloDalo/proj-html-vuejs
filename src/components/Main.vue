@@ -1,6 +1,6 @@
 <template>
     <main class="container-fluid">
-        <div class="container-summary" id="about-us">
+        <div class="container-summary">
             <h2>WORLD CLASS Fitness</h2>
             <img src="../assets/img/divider-xx-red.png" alt="xx-red">
             <p>At Avada Gym, everything we do from top to bottom is of the heighest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle</p>
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-condition" id="facilities">
+        <div class="container-condition">
             <ul class="row">
                 <MainCondition
                     v-for="(cardCondition, index) in cardsCondition"
@@ -82,6 +82,21 @@
                 </ul>
             <button>view all trainers</button>
         </div>
+        <div class="container-news">
+            <h2>performance news</h2>
+            <img src="../assets/img/divider-xx-red.png" alt="xx-red">
+                <ul class="row">
+                    <MainNews
+                        v-for="(newsCard, index) in newsCards"
+                        :key="index+newsCard.alt"
+                        :img = "newsCard.img"
+                        :alt = "newsCard.alt"
+                        :name = "newsCard.name"
+                        :text = "newsCard.text"
+                    />
+                </ul>
+            <button>read all articles</button>
+        </div>
     </main>
 </template>
 
@@ -90,6 +105,7 @@ import MainCondition from "./MainCondition.vue"
 import MainResult from "./MainResult.vue"
 import MainImage from "./MainImage.vue"
 import MainTrainers from "./MainTrainers.vue"
+import MainNews from "./MainNews.vue"
 export default {
     name: 'Main',
     components: {
@@ -97,6 +113,7 @@ export default {
         MainResult,
         MainImage,
         MainTrainers,
+        MainNews
     },
     data () {
         return {
@@ -181,6 +198,39 @@ export default {
                     "name": "Peter Rice Personal Traine",
                     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisl, onare volutpat."
                 },
+            ],
+            newsCards: [
+                {
+                    "img": require("../assets/img/blog1.jpg"),
+                    "alt": "blog1",
+                    "name": "Train with free weights or your body weight?",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]"
+                },                {
+                    "img": require("../assets/img/blog6.jpg"),
+                    "alt": "blog6",
+                    "name": "Nutritional advice that will keep you training",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]"
+                },                {
+                    "img": require("../assets/img/trainer4.jpg"),
+                    "alt": "trainer4",
+                    "name": "Simple principles for your next workout",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]."
+                },                {
+                    "img": require("../assets/img/blog4.jpg"),
+                    "alt": "blog4",
+                    "name": "To be number one, train like you’re number two",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]"
+                },                {
+                    "img": require("../assets/img/trainer3.jpg"),
+                    "alt": "trainer3",
+                    "name": "Top 5 mistakes every gym member makes",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]"
+                },                {
+                    "img": require("../assets/img/trainer1.jpg"),
+                    "alt": "trainer1",
+                    "name": "The myths of shedding body fat explored",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus arcu ante nec risus. [...]."
+                },                  
             ]
         }
     }
@@ -334,6 +384,33 @@ main {
                 color: black;
             }
         }     
+    }
+    .container-news {
+        width: 100%;
+        background-color: $ColorCubeBlak;
+        padding-top: 5em;
+        padding-bottom: 8em;
+        text-align: center;
+        h2 {
+            text-transform: uppercase;
+            color: white;
+        }
+        .row {
+            margin-top: 2em;
+            width: 75%;
+        }  
+        button {
+            background-color: transparent;
+            border: 1px solid $TextColorSummary;
+            color: $TextColorSummary;
+            text-transform: uppercase;
+            margin-top: 3em;
+            padding: 0.5em 2em;
+            &:hover {
+                background-color: $TextColorSummary;
+                color: black;
+            }
+        } 
     }
 }
 </style>
