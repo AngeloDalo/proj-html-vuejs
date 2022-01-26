@@ -6,7 +6,7 @@
             <p>At Avada Gym, everything we do from top to bottom is of the heighest quality to ensure we're equipped to help you reach your goals of a healthy and fit lifestyle</p>
             <div class="square-summary"></div>
         </div>
-
+        <!--log in utente input email con controllo della @-->
         <div class="container-singup">
             <div class="row">
                 <div class="col-6 d-flex justify-content-end">
@@ -126,6 +126,7 @@ export default {
     },
     data () {
         return {
+            //container-condition
             cardsCondition: [
                 {
                     "icon": "fas fa-unlink",
@@ -149,6 +150,7 @@ export default {
                     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisi, ordnare es volutpat etra us"
                 },
             ],
+            //container-results
             resultCards: [
                 {
                     "img": require("../assets/img/review_1-compressor.jpg"),
@@ -168,6 +170,7 @@ export default {
                     "name": "– Jeff Glum"
                 },
             ],
+            //container-image
             imagesCards: [
                 {
                     "img": require("../assets/img/home-image1.jpg"),
@@ -190,6 +193,7 @@ export default {
                     "name": "img6"
                 }, 
             ],
+            //container-trainers
             trainersCards: [
                 {
                     "img": require("../assets/img/trainer1.jpg"),
@@ -208,6 +212,7 @@ export default {
                     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisl, onare volutpat."
                 },
             ],
+            //container-news
             newsCards: [
                 {
                     "img": require("../assets/img/blog1.jpg"),

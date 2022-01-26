@@ -7,7 +7,7 @@
             </div>
             <!--link sito-->
             <div class="col-6">
-                <ul class="d-flex justify-content-end align-items-center">
+                <ul class="d-flex justify-content-end align-items-center flex-wrap">
                     <li class="me-4" v-for="(linkHeader, index) in linksHeader" :key="index">
                         <a :href= linkHeader.link > {{ linkHeader.name }}</a>
                     </li>
