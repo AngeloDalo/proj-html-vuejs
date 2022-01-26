@@ -157,11 +157,11 @@ export default {
                     "text": "“The trainers at Avada Gym have helped me reach my fitness goals beyond anything I could of hoped for. I love it!”",
                     "name": "– Tara Smith"
                 },                {
-                    "img": require("../assets/img/review_2-compressor.jpg"),
+                    "img": require("../assets/img/review_3-compressor-2.jpg"),
                     "text": "“The atmosphere at Avada Gym is amazing, the people are even better. All in all, it is a great place to work out.”",
                     "name": "– Simon Chel"
                 },                {
-                    "img": require("../assets/img/review_3-compressor-2.jpg"),
+                    "img": require("../assets/img/review_2-compressor.jpg"),
                     "text": "“The facilities at Avada Gym stood out to me the most. They are well maintained and have high quality equipment.”",
                     "name": "– Jen Wirth"
                 },                {
