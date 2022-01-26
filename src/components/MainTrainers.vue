@@ -33,6 +33,9 @@ export default {
 @import "../assets/scss/partials/_main.scss";
 li {
     @include box-img;
-    @include box-text; 
+    @include box-text;
+    .box-text {
+        background-color: $ColorCubeBlak;
+    } 
 }
 </style>

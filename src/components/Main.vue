@@ -80,7 +80,7 @@
                 <ul class="row">
                     <MainTrainers
                         v-for="(trainersCard, index) in trainersCards"
-                        :key="index+trainersCard.text"
+                        :key="index+trainersCard.name"
                         :img = "trainersCard.img"
                         :alt = "trainersCard.alt"
                         :name = "trainersCard.name"
